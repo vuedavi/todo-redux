@@ -6,7 +6,7 @@ export function Input(){
   const dispatch = useDispatch()
   return (
     <div className={styles.input.inputContainerClass}>
-      <input type="text" className={styles.input.inputClass} value={useTodo('inputValue')} onChange={e=> dispatch(updateInputValue(e.target.value))}/>
+      <input type="text" placeholder="Seu titulo aqui" className={styles.input.inputClass} value={useTodo('inputValue')} onChange={e=> dispatch(updateInputValue(e.target.value))}/>
     </div>
   )
 }

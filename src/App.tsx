@@ -1,14 +1,15 @@
-import { Head } from "./components/Head";
-import { ItemsContainer } from "./components/ItemsContainer";
-import styles from "./styles";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Details } from "./pages/Details";
+import { Home } from "./pages/Home";
+
 function App() {
   return (
-    <div className={styles.app.appClass}>
-      <div className={styles.app.containerClass}>
-        <Head />
-        <ItemsContainer/>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:id" element={<Details />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
